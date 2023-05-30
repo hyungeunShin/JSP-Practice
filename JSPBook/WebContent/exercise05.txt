@@ -1,0 +1,20 @@
+05장 내장 객체
+	01. 폼 페이지에서 입력된 데이터를 전달하는 요청 파라미터 값을 JSP 페이지로 가져오는 내장 객체는 뭇엇인지, 그리고 관련된 메소드에 대해 설명
+		request 내장 객체
+		
+		요청 파라미터 관련 메소드
+		- getParameter(String name) 	  => String => 요청 파라미터 이름이 name인 값을 전달 받는다. 요청 파라미터 값이 없으면 null
+		
+		- getParameterValues(String name) => String[] => 모든 요청 파라미터 이름이 name인 값을 배열 형태로 전달받는다. 요청 파라미터 값이 없으면 null을 반환합니다.
+		
+		- getParameterNames() 			  => Enumeration => 모든 요청 파라미터의 이름과 값을 Enumeration 객체 타입으로 전달받는다.
+		
+		- getParameterMap() 			  => Map => 모든 요청 파라미터의 이름과 값을 Map객체 타입으로 전달받는다. Map 객체 타입은 요청 파라미터 이름, 값 형식으로 구성
+		
+	
+	02. 서버에서 웹 브라우저에 다른 페이지로 강제 이동시키는 내장 객체와 관련된 메소드는?
+		- response 내장 객체
+		
+		페이지 이동 관련 메소드
+		- sendRedirect(String url) => void => 설정한 URL 페이지로 강제 이동한다.
+		

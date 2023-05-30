@@ -1,0 +1,32 @@
+11장 예외처리
+	01. 예외처리란 무엇인가
+		예외처리는 프로그램이 처리되는 동안 특정한 문제가 발생했을 때 처리를 중단하고 다른 처리를 하는 것으로 오류처리 라고도 한다
+	
+	02. page 디렉티브 태그를 이용한 예외 처리 기법에 사용되는 속성에 대해 설명
+		1) errorPage : 오류 페이지를 호출하는 page 디렉티브 태그의 속성 => <%@ page errorPage="에러페이지URL" %>
+		
+		errorPage에 설정된 오류 페이지 URL은 해당 속성이 설정되어 있는 페이지에서 에러가 발생 했을 때, errorPage 속성에 설정되어 있는 에러페이지로
+		이동하여 에러 메시지를 확인할 수 있도록 기능을 제공한다(에러 페이지를 활용한 예외 처리 방법 중 하나)
+		
+		2) isErrorPage : 현재 JSP 페이지를 오류 페이지로 호출하는 page 디렉티브 태그의 속성 => <%@ page isErrorPage="true" %>
+		
+		isErrorPage에 설정된 boolean 타입의 값인 true/false는 에러 페이지를 사용할지 안할지에 대한 내용이 아니라 여러 내장 객체들 중,
+		exception 내장객체를 사용할지 안할지에 대한 여부를 설정. isErrorPage에 true값이면 exception 내장객체 사용 가능
+		
+	03. web.xml 파일을 이용한 예외 처리 기법에 대해 설명
+		1) 오류 코드로 오류 페이지 호출하기
+			<error-page>
+				<error-code>오류코드</error-code>
+				<location>오류 페이지의 URL</location>
+			</error-page>
+		
+		2) 예외 유형으로 오류 페이지 호출하기
+			<error-page>
+				<exception-type>예외 유형</exception-type>
+				<location>오류 페이지의 URL</location>
+			</error-page>
+			
+		대표적으로 많이 사용되는 에러 예외 처리 유형이다. web.xml에 error-page 태그를 활용하여 에러 코드, 에러 유형(타입)에 따라 에러를 컨트롤 할 수 있다.
+		
+		
+	

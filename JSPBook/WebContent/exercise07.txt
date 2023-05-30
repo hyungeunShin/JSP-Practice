@@ -1,0 +1,12 @@
+07장 파일 업로드
+	01. 파일 업로드를 위한 form 태그 내에 반드시 설정해야 하는 기법은?
+		1) form 태그의 method 속성은 반드시 post
+		2) form 태그의 enctype 속성은 반드시 multipart/form-data
+		3) form 태그의 action 속성은 파일 업로드를 처리할 JSP 파일
+		4) 파일 업로드를 위해 input 태그의 type 속성을 file
+		
+	02. 파일을 서버에 업로드하는 처리 기법에 대해 간단히 설명
+		1) Commons-Fileupload를 이용한 파일 업로드
+		Commons-Fileupload를 이용하여 파일을 업로드하려면 먼저 Commos-Fileupload 패키지에 포함되어 있는 DiskFileupload 객체를 생성
+		생성된 객체를 통해 해당 클래스가 제공하는 메소드를 사용하여 웹 브라우저가 전송한 multipart/form-data 유형의 요청 파라미터를 가져온다
+		그리고 FileItem 클래스의 메소드를 사용하여 요청 파라미터가 일반 데이터인지 파일인지 분석 및 처리하여 파일을 업로드
